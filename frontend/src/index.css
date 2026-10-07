@@ -1,0 +1,41 @@
+:root {
+  --farm-brown: #221c0e;
+  --farm-brown-light: #3a3214;
+  --farm-green: #4c6b2f;
+  --egg-gold: #e9c46a;
+  --cream: #f6f1e3;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--farm-brown); color: var(--cream); font-family: Georgia, "Times New Roman", serif; }
+.shell { min-height: 100vh; }
+header {
+  background: var(--farm-brown-light); padding: 18px 30px; display: flex;
+  justify-content: space-between; align-items: center; border-bottom: 3px solid var(--egg-gold);
+}
+header h1 { margin: 0; font-size: 20px; color: var(--egg-gold); }
+nav button {
+  background: none; border: none; color: var(--cream); margin-right: 16px;
+  font-size: 15px; cursor: pointer; font-family: inherit;
+}
+nav button.active, nav button:hover { color: var(--egg-gold); }
+main { padding: 30px; max-width: 900px; margin: 0 auto; }
+.card { background: var(--farm-brown-light); border-radius: 10px; padding: 20px; margin-bottom: 20px; border: 1px solid #55492080; }
+input, select {
+  padding: 9px; border-radius: 6px; border: 1px solid var(--egg-gold);
+  background: #2a230f; color: var(--cream); width: 100%; margin-bottom: 10px; font-family: inherit;
+}
+button.primary {
+  background: var(--egg-gold); color: #2a2000; border: none; padding: 10px 18px;
+  border-radius: 6px; font-weight: 700; cursor: pointer; font-family: inherit;
+}
+button.primary:hover { opacity: 0.9; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #55492080; }
+th { color: var(--egg-gold); }
+.error { color: #ff9c7a; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.product-card { background: var(--farm-brown-light); padding: 16px; border-radius: 10px; border: 1px solid var(--farm-green); }
+.stat-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.stat { background: var(--farm-brown-light); padding: 16px 22px; border-radius: 10px; text-align: center; }
+.stat .value { font-size: 28px; color: var(--egg-gold); font-weight: 700; }
+.stat .label { font-size: 12px; opacity: 0.75; }
